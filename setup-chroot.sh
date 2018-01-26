@@ -1,5 +1,6 @@
 #!/bin/bash
 target="brewmaster"
+dockerfile="Dockerfile"
 workdir="$(realpath $0|rev|cut -d '/' -f2-|rev)"
 keyring="${workdir}/chroot-files/valve-archive-keyring.gpg"
 script="${workdir}/chroot-files/brewmaster"
@@ -24,4 +25,7 @@ debootstrap --keyring="${keyring}" --arch amd64 brewmaster ${target} http://repo
 cp ${workdir}/chroot-files/copy/* ${target}/
 
 # Create base docker image
-sudo tar -C ${target} -c . | docker import - ${target}-base
+tar -C ${target} -c . | docker import - ${target}-base
+
+#Build the docker container
+docker build -f ${workdir}/${dockerfile} -t brewmaster ${workdir}
