@@ -26,7 +26,7 @@ apt-get install -y actkbd broadcom-sta-dkms curl dkms firmware-adi firmware-athe
 apt-get install -y acpid bzip2 console-setup grub-pc installation-report libdiscover2 libclass-isa-perl
 
 # Install additional packages from the default.preseed
-apt-get install libc6:i386 libgl1-mesa-dri:i386 steamos-modeswitch-inhibitor:i386 steam:i386 nvidia-vdpau-driver:i386 libtxc-dxtn-s2tc0:i386 steamos-packages:i386 steamos-packages:amd64 libnvidia-encode1:amd64 steamos-modeswitch-inhibitor:amd64 steamos-autoupdate
+apt-get install -y libc6:i386 libgl1-mesa-dri:i386 steamos-modeswitch-inhibitor:i386 steam:i386 nvidia-vdpau-driver:i386 libtxc-dxtn-s2tc0:i386 steamos-packages:i386 steamos-packages:amd64 libnvidia-encode1:amd64 steamos-modeswitch-inhibitor:amd64 steamos-autoupdate
 
 # Remove packages which aren't found in SteamOS
 apt-get purge -y cracklib-runtime fonts-dejavu fonts-dejavu-extra fonts-droid gnome-accessibility-themes gsfonts libcanberra-gtk3-module libfakeroot libcogl-common libclutter-1.0-common libcuda1-i386 libglew1.10 libgphoto2-l10n libiw30 libnvidia-ml1:i386 libpaper-utils libsasl2-modules libsysfs2 manpages-dev menu mesa-va-drivers notification-daemon ntfs-3g packagekit-tools python-gobject-2 pulseaudio-module-x11 tcpd unzip usbmuxd vdpau-va-driver xdg-utils xml-core
