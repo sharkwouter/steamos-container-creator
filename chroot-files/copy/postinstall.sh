@@ -30,3 +30,6 @@ apt-get install -y libc6:i386 libgl1-mesa-dri:i386 steamos-modeswitch-inhibitor:
 
 # Remove packages which aren't found in SteamOS
 apt-get purge -y cracklib-runtime fonts-dejavu fonts-dejavu-extra fonts-droid gnome-accessibility-themes gsfonts libcanberra-gtk3-module libfakeroot libcogl-common libclutter-1.0-common libcuda1-i386 libglew1.10 libgphoto2-l10n libiw30 libnvidia-ml1:i386 libpaper-utils libsasl2-modules libsysfs2 manpages-dev menu mesa-va-drivers notification-daemon ntfs-3g packagekit-tools python-gobject-2 pulseaudio-module-x11 tcpd unzip usbmuxd vdpau-va-driver xdg-utils xml-core
+
+# Clear the package cache
+apt-get clean
