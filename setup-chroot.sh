@@ -23,5 +23,5 @@ debootstrap --keyring="${keyring}" --arch amd64 brewmaster ${target} http://repo
 # Copy files to the chroot
 cp ${workdir}/chroot-files/copy/* ${target}/
 
-# Run the postinstall script
-chroot ${target} ./postinstall.sh
+# Create base docker image
+sudo tar -C ${target} -c . | docker import - ${target}-base
