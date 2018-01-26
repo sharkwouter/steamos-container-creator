@@ -11,5 +11,4 @@ This is a collection of scripts made for building SteamOS docker containers
 
  ```
  sudo ./setup-chroot.sh
-
  ```
